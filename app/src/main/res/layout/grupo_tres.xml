@@ -1,60 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
-        <TextView
-            android:text="@string/question_five"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/distancia_oito"/>
-        <CheckBox
-            android:text="@string/opcao_five_one"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <CheckBox
-            android:text="@string/opcao_five_two"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <CheckBox
-            android:text="@string/opcao_five_three"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <CheckBox
-            android:text="@string/opcao_five_four"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="@string/question_six"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/distancia_oito"
+        android:text="@string/question_five" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/opcao_five_one" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/opcao_five_two" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/opcao_five_three" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/opcao_five_four" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/distancia_oito"
+        android:text="@string/question_six" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/distancia_oito"/>
-        <RadioGroup
+            android:layout_margin="@dimen/distancia_oito"
+            android:paddingLeft="@dimen/distancia_oito"
+            android:text="@string/opcao_six_one" />
+
+        <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <RadioButton
-                android:text="@string/opcao_six_one"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/distancia_oito"
-                android:paddingLeft="@dimen/distancia_oito"/>
-            <RadioButton
-                android:text="@string/opcao_six_two"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/distancia_oito"
-                android:paddingLeft="@dimen/distancia_oito"/>
-            <RadioButton
-                android:text="@string/opcao_six_three"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/distancia_oito"
-                android:paddingLeft="@dimen/distancia_oito"/>
-            <RadioButton
-                android:text="@string/opcao_six_four"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/distancia_oito"
-                android:paddingLeft="@dimen/distancia_oito"/>
-        </RadioGroup>
-        <include layout="@layout/grupo_quatro"/>
+            android:layout_margin="@dimen/distancia_oito"
+            android:paddingLeft="@dimen/distancia_oito"
+            android:text="@string/opcao_six_two" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/distancia_oito"
+            android:paddingLeft="@dimen/distancia_oito"
+            android:text="@string/opcao_six_three" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/distancia_oito"
+            android:paddingLeft="@dimen/distancia_oito"
+            android:text="@string/opcao_six_four" />
+    </RadioGroup>
+
+    <include layout="@layout/grupo_quatro" />
 </merge>
