@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Quiz Crôn. Matador do Rei</string>
+    <!--Cabeçalho do quiz-->
+    <string name="heading">Perguntas relacionadas a saga literária “A crônica do matador do Rei” de autoria de Patrick Rothfuss,
+        com base nos livros traduzidos e vendido no Brasil pela editora Arqueiro.</string>
     <!--primeira pergunta e opções-->
     <string name="question_one">1/10 - O 1º livro da saga tem por nome original “The name of the wind”, mas nem sempre a tradução
         é feita ao pé da letra, sabendo disso qual foi o título no Brasil?</string>

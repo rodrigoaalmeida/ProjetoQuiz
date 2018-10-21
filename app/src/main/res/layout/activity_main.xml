@@ -12,6 +12,11 @@
         android:layout_margin="@dimen/distancia_oito"
         android:orientation="vertical">
 
+        <TextView
+            android:text="@string/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <include layout="@layout/grupo_um" />
     </LinearLayout>
 </ScrollView>
