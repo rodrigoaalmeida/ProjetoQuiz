@@ -2,9 +2,7 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/distancia_oito"
+        style="@style/PadraoQuestions"
         android:text="@string/question_seven" />
 
     <RadioGroup
@@ -42,9 +40,7 @@
     </RadioGroup>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/distancia_oito"
+        style="@style/PadraoQuestions"
         android:text="@string/question_eight" />
 
     <RadioGroup
@@ -82,9 +78,7 @@
     </RadioGroup>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/distancia_oito"
+        style="@style/PadraoQuestions"
         android:text="@string/question_nine" />
 
     <RadioGroup
@@ -122,9 +116,7 @@
     </RadioGroup>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/distancia_oito"
+        style="@style/PadraoQuestions"
         android:text="@string/question_ten" />
 
     <EditText

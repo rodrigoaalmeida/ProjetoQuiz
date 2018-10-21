@@ -2,9 +2,8 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/distancia_oito"
+        style="@style/PadraoQuestions"
+        android:layout_marginTop="@dimen/distancia_dezesseis"
         android:text="@string/question_one" />
 
     <RadioGroup
@@ -42,9 +41,7 @@
     </RadioGroup>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/distancia_oito"
+        style="@style/PadraoQuestions"
         android:text="@string/question_two" />
 
     <EditText

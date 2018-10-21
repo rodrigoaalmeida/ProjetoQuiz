@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="distancia_oito">8dp</dimen>
+    <dimen name="distancia_dezesseis">16dp</dimen>
+    <dimen name="size_text_heading">18sp</dimen>
+    <dimen name="size_text_questions">16sp</dimen>
 </resources>
