@@ -6,4 +6,5 @@
     <color name="color_fundo_titulo">#B2DFDB</color>
     <color name="color_text">#424242</color>
     <color name="color_fundo_question">#BBDEFB</color>
+    <color name="color_text_resposta">#000000</color>
 </resources>

@@ -11,31 +11,19 @@
         android:orientation="vertical">
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_seven_one" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_seven_two" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_seven_three" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_seven_four" />
     </RadioGroup>
 
@@ -49,31 +37,19 @@
         android:orientation="vertical">
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_eight_one" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_eight_two" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_eight_three" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_eight_four" />
     </RadioGroup>
 
@@ -87,31 +63,19 @@
         android:orientation="vertical">
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_nine_one" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_nine_two" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_nine_three" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_nine_four" />
     </RadioGroup>
 
@@ -120,13 +84,13 @@
         android:text="@string/question_ten" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/PadraoEditText"
         android:hint="@string/hint_ask_ten" />
 
     <Button
         android:id="@+id/button_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/distancia_trinta_dois"
         android:text="Submit" />
 </merge>

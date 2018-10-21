@@ -3,7 +3,6 @@
 
     <TextView
         style="@style/PadraoQuestions"
-        android:layout_marginTop="@dimen/distancia_dezesseis"
         android:text="@string/question_one" />
 
     <RadioGroup
@@ -12,31 +11,19 @@
         android:orientation="vertical">
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcoes_one" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcoes_two" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcoes_three" />
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/distancia_oito"
-            android:paddingLeft="@dimen/distancia_oito"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcoes_four" />
     </RadioGroup>
 
@@ -45,8 +32,7 @@
         android:text="@string/question_two" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/PadraoEditText"
         android:hint="@string/hint_ask_two" />
 
     <include layout="@layout/grupo_dois" />

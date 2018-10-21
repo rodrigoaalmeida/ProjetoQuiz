@@ -12,10 +12,30 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">@dimen/distancia_oito</item>
-        <item name="android:textSize">@dimen/size_text_questions</item>
+        <item name="android:layout_marginTop">@dimen/distancia_vinte_quatro</item>
+        <item name="android:textSize">@dimen/size_text_dezesseis</item>
         <item name="android:textStyle">bold</item>
         <item name="android:background">@color/color_fundo_question</item>
         <item name="android:textColor">@color/color_text</item>
     </style>
-
+    <!-- Formatação RadioButton e CheckBox-->
+    <style name="PadraoRadioBtnCheckBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/distancia_dezesseis</item>
+        <item name="android:paddingLeft">@dimen/distancia_dezesseis</item>
+        <item name="android:textColor">@color/color_text_resposta</item>
+        <item name="android:textSize">@dimen/size_text_dezesseis</item>
+    </style>
+    <!-- Formatação EditText-->
+    <style name="PadraoEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/distancia_oito</item>
+        <item name="android:layout_marginRight">@dimen/distancia_oito</item>
+        <item name="android:layout_marginTop">@dimen/distancia_dezesseis</item>
+        <item name="android:layout_marginBottom">@dimen/distancia_dezesseis</item>
+        <item name="android:textColor">@color/color_text_resposta</item>
+        <item name="android:textSize">@dimen/size_text_dezesseis</item>
+    </style>
 </resources>
