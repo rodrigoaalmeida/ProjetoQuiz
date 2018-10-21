@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Quiz Crôn. Matador do Rei</string>
+    <!--primeira pergunta e opções-->
+    <string name="question_one">1/10 - O 1º livro da saga tem por nome original “The name of the wind”, mas nem sempre a tradução
+        é feita ao pé da letra, sabendo disso qual foi o título no Brasil?</string>
+    <string name="opcoes_one">O Nome do Fôlego</string>
+    <string name="opcoes_two">O Nome da Ventania</string>
+    <string name="opcoes_three">O Nome da Aragem</string>
+    <string name="opcoes_four">O Nome do Vento</string>
+    <!--Segunda pergunta e opções-->
+    <string name="question_two">2/10 - O 2º título da série tem por título original “The Wise Man’s Fear”, ainda levando em consideração as
+        traduções conforme dito na pergunta dois, qual foi o nome dado no Brasil?</string>
+    <string name="edit_resposta_two">O Temor do Sábio</string>
+    <string name="hint_ask_two">O nome do livro</string>
+    <!--Terceira pergunta e opções-->
+    <string name="question_three">3/10 - Ambos os livros citados até agora tiveram uma única pessoa como tradutora e como
+        diagramação dos livros impressos, marque as pessoas responsáveis por esses dois processos:</string>
+    <string name="opcao_three_one">Vera Ribeiro</string>
+    <string name="opcao_three_two">José Tedin</string>
+    <string name="opcao_three_three">Valéria Teixeira</string>
+    <string name="opcao_three_four">Cláudia Pessoa</string>
+    <!--Quarta pergunta e opções-->
+    <string name="question_four">4/10 - Nessa saga o personagem principal pertencia a um grupo de
+        artistas viajantes que incluía seus pais, qual era o nome do povo a que ele pertencia?</string>
+    <string name="opcao_four_one">Povo dos Vermelhos</string>
+    <string name="opcao_four_two">Caravana Rur</string>
+    <string name="opcao_four_three">Edena Ruh</string>
+    <string name="opcao_four_four">Povo Andarilho</string>
+    <!--Quinta pergunta e opções-->
+    <string name="question_five">5/10 - O protagonista nos dois primeiros livros da saga tem vários nomes atrelado a
+        sua pessoa no decorrer de sua vida, marque nas opções abaixo os que foram citados:</string>
+    <string name="opcao_five_one">Kote</string>
+    <string name="opcao_five_two">Kvothe</string>
+    <string name="opcao_five_three">Seis-Cordas</string>
+    <string name="opcao_five_four">Dedos de mosca</string>
+    <!--Sexta pergunta e opções-->
+    <string name="question_six">6/10 - Logo no inicio do 1º livro o protagonista é ensinado por um(a) arcanista da Universidade e por
+        quem ele mantinha um grande apreço e até lhe considerava da família, qual era o nome dessa pessoa?</string>
+    <string name="opcao_six_one">Oliver Clin</string>
+    <string name="opcao_six_two">Danna</string>
+    <string name="opcao_six_three">Rufus</string>
+    <string name="opcao_six_four">Abenthy</string>
+    <!--Setima pergunta e opções-->
+    <string name="question_seven">7/10 - Para que as caravanas artísticas pudessem se apresentar nas cidades ou povoados em geral era bom ter
+        um benfeitor ou mecenas, quem era o mecenas da trupe dele?</string>
+    <string name="opcao_seven_one">Barão Desmond</string>
+    <string name="opcao_seven_two">Barão Rodrick</string>
+    <string name="opcao_seven_three">Baronesa Dondoca</string>
+    <string name="opcao_seven_four">Barão Greyfallow</string>
+    <!--Oitava pergunta e opções-->
+    <string name="question_eight">8/10 - O protagonista desde muito jovem já tinha o desejo de frequentar um prédio específico
+        da universidade o qual era atribuído como grande fonte de conhecimento, qual era o nome desse prédio na saga?</string>
+    <string name="opcao_eight_one">Tomus</string>
+    <string name="opcao_eight_two">Biblioteca</string>
+    <string name="opcao_eight_three">Arquivo</string>
+    <string name="opcao_eight_four">Cavus</string>
+    <!--Nona pergunta e opções-->
+    <string name="question_nine">9/10 -	Todos os alunos da universidade precisavam pagar uma taxa no início do período para estudar, essa taxa podia variar conforme a
+        demonstração de aptidão do candidato ou aluno, sendo assim qual foi a taxa estipulada para o protagonista na sua primeira admissão? Em citação direta ao livro.</string>
+    <string name="opcao_nine_one">“...menos três talentos.”</string>
+    <string name="opcao_nine_two">“...quatro dobrões.”</string>
+    <string name="opcao_nine_three">“...menos quatro coroas.”</string>
+    <string name="opcao_nine_four">“...um talento modegano.”</string>
+    <!--Decima pergunta e opções-->
+    <string name="question_ten">10/10 - Estudar na universidade era um tanto quanto perigoso de diversas formas, apesar de ser muito gratificante ao protagonista, uma das
+        ciências que ele queria dominar desde que encontrou o primeiro arcanista ainda fora da universidade era a de nomear, tanto que ele chegou a se jogar de cima do prédio
+        do sanatório da universidade para que o mestre responsável dessa matéria lhe ensinasse, o nome desse referido personagem é?</string>
+    <string name="edit_resposta_ten">Mestre Elodin</string>
+    <string name="hint_ask_ten">Mestre Eduardo</string>
+</resources>
