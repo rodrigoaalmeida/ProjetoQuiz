@@ -12,18 +12,22 @@
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_seven_one"
             android:text="@string/opcao_seven_one" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_seven_two"
             android:text="@string/opcao_seven_two" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_seven_three"
             android:text="@string/opcao_seven_three" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_seven_four"
             android:text="@string/opcao_seven_four" />
     </RadioGroup>
 
@@ -38,18 +42,22 @@
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_eight_one"
             android:text="@string/opcao_eight_one" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_eight_two"
             android:text="@string/opcao_eight_two" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_eight_three"
             android:text="@string/opcao_eight_three" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_eight_four"
             android:text="@string/opcao_eight_four" />
     </RadioGroup>
 
@@ -64,18 +72,22 @@
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_nine_one"
             android:text="@string/opcao_nine_one" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_nine_two"
             android:text="@string/opcao_nine_two" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_nine_three"
             android:text="@string/opcao_nine_three" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_nine_four"
             android:text="@string/opcao_nine_four" />
     </RadioGroup>
 
@@ -85,6 +97,7 @@
 
     <EditText
         style="@style/PadraoEditText"
+        android:id="@+id/edit_text_ten"
         android:hint="@string/hint_ask_ten" />
 
     <Button

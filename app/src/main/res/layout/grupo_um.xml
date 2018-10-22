@@ -12,18 +12,22 @@
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_one_one"
             android:text="@string/opcoes_one" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_one_two"
             android:text="@string/opcoes_two" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_one_three"
             android:text="@string/opcoes_three" />
 
         <RadioButton
             style="@style/PadraoRadioBtnCheckBox"
+            android:id="@+id/radio_btn_one_four"
             android:text="@string/opcoes_four" />
     </RadioGroup>
 
@@ -33,6 +37,7 @@
 
     <EditText
         style="@style/PadraoEditText"
+        android:id="@+id/edit_text_two"
         android:hint="@string/hint_ask_two" />
 
     <include layout="@layout/grupo_dois" />
