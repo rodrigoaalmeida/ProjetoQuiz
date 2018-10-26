@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     List<RadioButton> listRadioBtnCertos = new ArrayList<>();
 
     CheckBox[][] matrizCheckBox = new CheckBox[2][4];
-    CheckBox[] vetorCheckBox = new CheckBox[5];
+    CheckBox[] vetorCheckBoxRespostasCertas = new CheckBox[5];
 
     int pontucao;
 
@@ -137,20 +137,62 @@ public class MainActivity extends AppCompatActivity {
         matrizCheckBox[1][2] = checkBoxFiveThree;
         matrizCheckBox[1][3] = checkBoxFiveFour;
 
-        vetorCheckBox[0] = checkBoxThreeOne;
-        vetorCheckBox[1] = checkBoxThreeThree;
-        vetorCheckBox[2] = checkBoxFiveOne;
-        vetorCheckBox[3] = checkBoxFiveTwo;
-        vetorCheckBox[4] = checkBoxFiveThree;
+        vetorCheckBoxRespostasCertas[0] = checkBoxThreeOne;
+        vetorCheckBoxRespostasCertas[1] = checkBoxThreeThree;
+        vetorCheckBoxRespostasCertas[2] = checkBoxFiveOne;
+        vetorCheckBoxRespostasCertas[3] = checkBoxFiveTwo;
+        vetorCheckBoxRespostasCertas[4] = checkBoxFiveThree;
     }
 
 
     public void pontuacaoQuiz(View view){
+        String pontucaoParte1 = getResources().getString(R.string.pontucao_metade);
+        String pontucaoParte2 = getResources().getString(R.string.pontuacao_final);
+        if (verificadorRespostaVazia()){
+            return;
+        }
         compararRadioButton();
-//        compararCheckBox();
-//        opcoesDesabilitadas();
-//        compararEditText();
-//        Toast.makeText(getApplicationContext(), "Voce acertou: " + pontucao + "%% do quiz", Toast.LENGTH_LONG).show();
+        compararCheckBox();
+        opcoesDesabilitadas();
+        compararEditText();
+        Toast.makeText(getApplicationContext(), pontucaoParte1 + " " + pontucao + pontucaoParte2, Toast.LENGTH_LONG).show();
+    }
+
+    private boolean verificadorRespostaVazia(){
+        String mensErroRadioBtn = getResources().getString(R.string.erro_radio_button);
+        String mensErroCheckBox = getResources().getString(R.string.erro_check_box);
+        String mensErroEditText = getResources().getString(R.string.erro_edit_text);
+        boolean verificador = false;
+        String sQuestionTwo = editTextTwo.getText().toString();
+        String sQuestionTen = editTextTen.getText().toString();
+        int contRadioVazio = 0;
+        int contCheckBoxVazio = 0;
+        for (RadioGroup group : listaRadioGroup){
+            int vazio = group.getCheckedRadioButtonId();
+            if (vazio == -1){
+                contRadioVazio++;
+            }
+        }
+        if (contRadioVazio > 0){
+            Toast.makeText(getApplicationContext(), mensErroRadioBtn, Toast.LENGTH_SHORT).show();
+            verificador = true;
+        }
+        if (sQuestionTwo.equals("") || sQuestionTen.equals("")){
+            Toast.makeText(getApplicationContext(), mensErroEditText, Toast.LENGTH_SHORT).show();
+            verificador = true;
+        }
+        for (int i = 0; i < matrizCheckBox.length; i++){
+            for (int j = 0; j < matrizCheckBox[i].length; j++){
+                if (!matrizCheckBox[i][j].isChecked()){
+                    contCheckBoxVazio++;
+                }
+            }
+        }
+        if (contCheckBoxVazio > 6){
+            Toast.makeText(getApplicationContext(), mensErroCheckBox, Toast.LENGTH_SHORT).show();
+            verificador = true;
+        }
+        return verificador;
     }
 
     private void compararEditText(){
@@ -180,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        for (CheckBox alternativas : vetorCheckBox) {
+        for (CheckBox alternativas : vetorCheckBoxRespostasCertas) {
             if (!alternativas.isChecked()) {
                 alternativas.setTypeface(Typeface.DEFAULT_BOLD);
                 alternativas.setTextColor(getResources().getColor(R.color.resposta_certa));
@@ -189,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void compararMatrizVetorCheckBox(int linha, int coluna){
-        for (CheckBox alternativas : vetorCheckBox){
+        for (CheckBox alternativas : vetorCheckBoxRespostasCertas){
             if (alternativas.equals(matrizCheckBox[linha][coluna])){
                 alternativas.setTypeface(Typeface.DEFAULT_BOLD);
                 alternativas.setTextColor(getResources().getColor(R.color.resposta_certa));
