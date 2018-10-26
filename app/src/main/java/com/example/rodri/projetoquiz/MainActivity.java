@@ -4,6 +4,7 @@ import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    //    Declaração das variaveis globais.
     RadioButton radioBtnOneOne;
     RadioButton radioBtnOneTwo;
     RadioButton radioBtnOneThree;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton radioBtnNineThree;
     RadioButton radioBtnNineFour;
     EditText editTextTen;
-
+    //    Declaração dos radios gupos e suas listas.
     RadioGroup radioGroup1;
     RadioGroup radioGroup4;
     RadioGroup radioGroup6;
@@ -58,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup radioGroup9;
     List<RadioGroup> listaRadioGroup = new ArrayList<>();
     List<RadioButton> listRadioBtnCertos = new ArrayList<>();
-
+    //    Criação da matriz e vetor dos CheckBox.
     CheckBox[][] matrizCheckBox = new CheckBox[2][4];
     CheckBox[] vetorCheckBoxRespostasCertas = new CheckBox[5];
-
+    //    Variavel para pontuação do quiz.
     int pontucao;
 
     @Override
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         pontucao = 0;
     }
 
-    private void atribuirComponenteView(){
+    private void atribuirComponenteView() {
         radioBtnOneOne = findViewById(R.id.radio_btn_one_one);
         radioBtnOneTwo = findViewById(R.id.radio_btn_one_two);
         radioBtnOneThree = findViewById(R.id.radio_btn_one_three);
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         radioBtnNineThree = findViewById(R.id.radio_btn_nine_three);
         radioBtnNineFour = findViewById(R.id.radio_btn_nine_four);
         editTextTen = findViewById(R.id.edit_text_ten);
-
+//        Componentes para comparação das respostas trabalhando com ArrayList.
         radioGroup1 = findViewById(R.id.radio_group_one);
         radioGroup4 = findViewById(R.id.radio_group_four);
         radioGroup6 = findViewById(R.id.radio_group_six);
@@ -120,14 +121,14 @@ public class MainActivity extends AppCompatActivity {
         listaRadioGroup.add(radioGroup7);
         listaRadioGroup.add(radioGroup8);
         listaRadioGroup.add(radioGroup9);
-
+//        Respostas das questões com RadioButton adicionadas a lista para comparação.
         listRadioBtnCertos.add(radioBtnOneFour);
         listRadioBtnCertos.add(radioBtnFourThree);
         listRadioBtnCertos.add(radioBtnSixFour);
         listRadioBtnCertos.add(radioBtnSevenFour);
         listRadioBtnCertos.add(radioBtnEightThree);
         listRadioBtnCertos.add(radioBtnNineOne);
-
+//        Atribuição dos valores CheckBox a matriz para comparações.
         matrizCheckBox[0][0] = checkBoxThreeOne;
         matrizCheckBox[0][1] = checkBoxThreeTwo;
         matrizCheckBox[0][2] = checkBoxThreeThree;
@@ -136,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         matrizCheckBox[1][1] = checkBoxFiveTwo;
         matrizCheckBox[1][2] = checkBoxFiveThree;
         matrizCheckBox[1][3] = checkBoxFiveFour;
-
+//        Atribuição dos valores do vetor com as respostas do CheckBox.
         vetorCheckBoxRespostasCertas[0] = checkBoxThreeOne;
         vetorCheckBoxRespostasCertas[1] = checkBoxThreeThree;
         vetorCheckBoxRespostasCertas[2] = checkBoxFiveOne;
@@ -144,11 +145,11 @@ public class MainActivity extends AppCompatActivity {
         vetorCheckBoxRespostasCertas[4] = checkBoxFiveThree;
     }
 
-
-    public void pontuacaoQuiz(View view){
+    //    Metodo chamado pelo Button finalizar, que verifica se tudo foi respondido se sim da a pontuação, do contrario manda terminar o quiz.
+    public void pontuacaoQuiz(View view) {
         String pontucaoParte1 = getResources().getString(R.string.pontucao_metade);
         String pontucaoParte2 = getResources().getString(R.string.pontuacao_final);
-        if (verificadorRespostaVazia()){
+        if (verificadorRespostaVazia()) {
             return;
         }
         compararRadioButton();
@@ -158,7 +159,12 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), pontucaoParte1 + " " + pontucao + pontucaoParte2, Toast.LENGTH_LONG).show();
     }
 
-    private boolean verificadorRespostaVazia(){
+    /**
+     * Verifica se todas as questões receberam pelo menos uma resposta
+     *
+     * @return verificador que pode mandar seguir em frente ou mandar completar o quiz
+     */
+    private boolean verificadorRespostaVazia() {
         String mensErroRadioBtn = getResources().getString(R.string.erro_radio_button);
         String mensErroCheckBox = getResources().getString(R.string.erro_check_box);
         String mensErroEditText = getResources().getString(R.string.erro_edit_text);
@@ -167,58 +173,60 @@ public class MainActivity extends AppCompatActivity {
         String sQuestionTen = editTextTen.getText().toString();
         int contRadioVazio = 0;
         int contCheckBoxVazio = 0;
-        for (RadioGroup group : listaRadioGroup){
+        for (RadioGroup group : listaRadioGroup) {
             int vazio = group.getCheckedRadioButtonId();
-            if (vazio == -1){
+            if (vazio == -1) {
                 contRadioVazio++;
             }
         }
-        if (contRadioVazio > 0){
+        if (contRadioVazio > 0) {
             Toast.makeText(getApplicationContext(), mensErroRadioBtn, Toast.LENGTH_SHORT).show();
             verificador = true;
         }
-        if (sQuestionTwo.equals("") || sQuestionTen.equals("")){
+        if (sQuestionTwo.equals("") || sQuestionTen.equals("")) {
             Toast.makeText(getApplicationContext(), mensErroEditText, Toast.LENGTH_SHORT).show();
             verificador = true;
         }
-        for (int i = 0; i < matrizCheckBox.length; i++){
-            for (int j = 0; j < matrizCheckBox[i].length; j++){
-                if (!matrizCheckBox[i][j].isChecked()){
+        for (int i = 0; i < matrizCheckBox.length; i++) {
+            for (int j = 0; j < matrizCheckBox[i].length; j++) {
+                if (!matrizCheckBox[i][j].isChecked()) {
                     contCheckBoxVazio++;
                 }
             }
         }
-        if (contCheckBoxVazio > 6){
+        if (contCheckBoxVazio > 6) {
             Toast.makeText(getApplicationContext(), mensErroCheckBox, Toast.LENGTH_SHORT).show();
             verificador = true;
         }
         return verificador;
     }
 
-    private void compararEditText(){
+    //    Verifica as respostas do campos de texto com a resposta correta.
+    private void compararEditText() {
         String respostaQuestionTwo = getResources().getString(R.string.edit_resposta_two);
         String respostaQuestionTen = getResources().getString(R.string.edit_resposta_ten);
-        if (respostaQuestionTwo.equalsIgnoreCase(editTextTwo.getText().toString())){
+        if (respostaQuestionTwo.equalsIgnoreCase(editTextTwo.getText().toString())) {
             pontucao += 10;
             editTextTwo.setTextColor(getResources().getColor(R.color.resposta_certa));
             editTextTwo.setTypeface(Typeface.DEFAULT_BOLD);
-        }else {
+        } else {
             editTextTwo.setTextColor(getResources().getColor(R.color.resposta_errada));
         }
-        if (respostaQuestionTen.equalsIgnoreCase(editTextTen.getText().toString())){
+        if (respostaQuestionTen.equalsIgnoreCase(editTextTen.getText().toString())) {
             pontucao += 10;
             editTextTen.setTextColor(getResources().getColor(R.color.resposta_certa));
             editTextTen.setTypeface(Typeface.DEFAULT_BOLD);
-        }else {
+        } else {
             editTextTen.setTextColor(getResources().getColor(R.color.resposta_errada));
         }
     }
 
-    private void compararCheckBox(){
-        for (int i = 0; i < matrizCheckBox.length; i++){
-            for (int j = 0; j < matrizCheckBox[i].length; j++){
-                if (matrizCheckBox[i][j].isChecked()){
-                    compararMatrizVetorCheckBox(i,j);
+    //    Compara as resposta marcadas com o vetor para verificar as certas.
+    private void compararCheckBox() {
+        for (int i = 0; i < matrizCheckBox.length; i++) {
+            for (int j = 0; j < matrizCheckBox[i].length; j++) {
+                if (matrizCheckBox[i][j].isChecked()) {
+                    compararMatrizVetorCheckBox(i, j);
                 }
             }
         }
@@ -230,9 +238,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void compararMatrizVetorCheckBox(int linha, int coluna){
-        for (CheckBox alternativas : vetorCheckBoxRespostasCertas){
-            if (alternativas.equals(matrizCheckBox[linha][coluna])){
+    /**
+     * Compara as resposta do metodo compararCheckBox com o vetor de respostas certas
+     *
+     * @param linha  pega a linha da matriz
+     * @param coluna pega a coluna da matriz
+     */
+    private void compararMatrizVetorCheckBox(int linha, int coluna) {
+        for (CheckBox alternativas : vetorCheckBoxRespostasCertas) {
+            if (alternativas.equals(matrizCheckBox[linha][coluna])) {
                 alternativas.setTypeface(Typeface.DEFAULT_BOLD);
                 alternativas.setTextColor(getResources().getColor(R.color.resposta_certa));
                 pontucao += 4;
@@ -243,11 +257,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void compararRadioButton(){
-        for (RadioGroup group : listaRadioGroup){
+    //    Procura nos RadioGroup as respostas marcadas e compara com a lista de respostas.
+    private void compararRadioButton() {
+        for (RadioGroup group : listaRadioGroup) {
             RadioButton respostaRadioBtn = findViewById(group.getCheckedRadioButtonId());
-            for(RadioButton button : listRadioBtnCertos){
-                if (button.equals(respostaRadioBtn)){
+            for (RadioButton button : listRadioBtnCertos) {
+                if (button.equals(respostaRadioBtn)) {
                     pontucao += 10;
                     button.setTypeface(Typeface.DEFAULT_BOLD);
                 } else {
@@ -258,7 +273,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void opcoesDesabilitadas(){
+    //    Desabilita tudo quando o quiz é finalizado.
+    private void opcoesDesabilitadas() {
         radioBtnOneOne.setEnabled(false);
         radioBtnOneTwo.setEnabled(false);
         radioBtnOneThree.setEnabled(false);
@@ -293,5 +309,7 @@ public class MainActivity extends AppCompatActivity {
         radioBtnNineThree.setEnabled(false);
         radioBtnNineFour.setEnabled(false);
         editTextTen.setEnabled(false);
+        Button buttonEncerrar = findViewById(R.id.button_submit);
+        buttonEncerrar.setEnabled(false);
     }
 }

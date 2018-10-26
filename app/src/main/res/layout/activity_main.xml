@@ -13,15 +13,15 @@
         android:orientation="vertical">
 
         <TextView
-            android:text="@string/heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/distancia_oito"
             android:layout_marginBottom="@dimen/distancia_dezesseis"
-            android:textSize="@dimen/size_text_heading"
-            android:textStyle="bold|italic"
             android:background="@color/color_fundo_titulo"
-            android:textColor="@color/color_text"/>
+            android:padding="@dimen/distancia_oito"
+            android:text="@string/heading"
+            android:textColor="@color/color_text"
+            android:textSize="@dimen/size_text_heading"
+            android:textStyle="bold|italic" />
 
         <include layout="@layout/grupo_um" />
     </LinearLayout>

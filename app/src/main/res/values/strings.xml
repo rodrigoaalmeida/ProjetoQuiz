@@ -70,6 +70,8 @@
         do sanatório da universidade para que o mestre responsável dessa matéria lhe ensinasse, o nome desse referido personagem é?</string>
     <string name="edit_resposta_ten">Mestre Elodin</string>
     <string name="hint_ask_ten">Mestre Eduardo</string>
+    <!--Button-->
+    <string name="button_encerrar">finalizar</string>
     <!--Textos do java-->
     <string name="pontucao_metade">Voce acertou:</string>
     <string name="pontuacao_final">% do quiz! PARABÉNS!!</string>

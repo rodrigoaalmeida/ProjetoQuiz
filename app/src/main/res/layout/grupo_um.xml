@@ -12,23 +12,23 @@
         android:orientation="vertical">
 
         <RadioButton
-            style="@style/PadraoRadioBtnCheckBox"
             android:id="@+id/radio_btn_one_one"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcoes_one" />
 
         <RadioButton
-            style="@style/PadraoRadioBtnCheckBox"
             android:id="@+id/radio_btn_one_two"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcoes_two" />
 
         <RadioButton
-            style="@style/PadraoRadioBtnCheckBox"
             android:id="@+id/radio_btn_one_three"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcoes_three" />
 
         <RadioButton
-            style="@style/PadraoRadioBtnCheckBox"
             android:id="@+id/radio_btn_one_four"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcoes_four" />
     </RadioGroup>
 
@@ -37,8 +37,8 @@
         android:text="@string/question_two" />
 
     <EditText
-        style="@style/PadraoEditText"
         android:id="@+id/edit_text_two"
+        style="@style/PadraoEditText"
         android:hint="@string/hint_ask_two" />
 
     <include layout="@layout/grupo_dois" />

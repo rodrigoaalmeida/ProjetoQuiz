@@ -6,23 +6,23 @@
         android:text="@string/question_five" />
 
     <CheckBox
-        style="@style/PadraoRadioBtnCheckBox"
         android:id="@+id/check_box_five_one"
+        style="@style/PadraoRadioBtnCheckBox"
         android:text="@string/opcao_five_one" />
 
     <CheckBox
-        style="@style/PadraoRadioBtnCheckBox"
         android:id="@+id/check_box_five_two"
+        style="@style/PadraoRadioBtnCheckBox"
         android:text="@string/opcao_five_two" />
 
     <CheckBox
-        style="@style/PadraoRadioBtnCheckBox"
         android:id="@+id/check_box_five_three"
+        style="@style/PadraoRadioBtnCheckBox"
         android:text="@string/opcao_five_three" />
 
     <CheckBox
-        style="@style/PadraoRadioBtnCheckBox"
         android:id="@+id/check_box_five_four"
+        style="@style/PadraoRadioBtnCheckBox"
         android:text="@string/opcao_five_four" />
 
     <TextView
@@ -36,23 +36,23 @@
         android:orientation="vertical">
 
         <RadioButton
-            style="@style/PadraoRadioBtnCheckBox"
             android:id="@+id/radio_btn_six_one"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_six_one" />
 
         <RadioButton
-            style="@style/PadraoRadioBtnCheckBox"
             android:id="@+id/radio_btn_six_two"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_six_two" />
 
         <RadioButton
-            style="@style/PadraoRadioBtnCheckBox"
             android:id="@+id/radio_btn_six_three"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_six_three" />
 
         <RadioButton
-            style="@style/PadraoRadioBtnCheckBox"
             android:id="@+id/radio_btn_six_four"
+            style="@style/PadraoRadioBtnCheckBox"
             android:text="@string/opcao_six_four" />
     </RadioGroup>
 
