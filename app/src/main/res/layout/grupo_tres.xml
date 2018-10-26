@@ -30,6 +30,7 @@
         android:text="@string/question_six" />
 
     <RadioGroup
+        android:id="@+id/radio_group_six"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">

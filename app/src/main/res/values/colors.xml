@@ -7,4 +7,6 @@
     <color name="color_text">#424242</color>
     <color name="color_fundo_question">#BBDEFB</color>
     <color name="color_text_resposta">#000000</color>
+    <color name="resposta_certa">#00C853</color>
+    <color name="resposta_errada">#D50000</color>
 </resources>
