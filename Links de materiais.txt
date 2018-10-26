@@ -1,0 +1,10 @@
+Comparação dos EditText
+https://pt.stackoverflow.com/questions/3905/como-comparar-strings-em-java
+
+Comparação dos dos RadioButtons
+https://stackoverflow.com/questions/26736285/getcheckedradiobuttonid-of-radiogroup-returns-2131034181-2-3-4
+
+Uso de Merge e Include para inflar diversos layouts em um unico
+https://www.thiengo.com.br/tags-merge-e-viewstub-para-otimizar-sua-app-android
+https://pt.stackoverflow.com/questions/8164/quais-s%C3%A3o-as-diferen%C3%A7as-entre-merge-e-include
+https://developer.android.com/training/improving-layouts/reusing-layouts

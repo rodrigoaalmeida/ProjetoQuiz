@@ -202,6 +202,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //    Verifica as respostas do campos de texto com a resposta correta.
+    //    link com modelo de comparação para EditText
+    //    https://pt.stackoverflow.com/questions/3905/como-comparar-strings-em-java
     private void compararEditText() {
         String respostaQuestionTwo = getResources().getString(R.string.edit_resposta_two);
         String respostaQuestionTen = getResources().getString(R.string.edit_resposta_ten);
@@ -258,6 +260,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //    Procura nos RadioGroup as respostas marcadas e compara com a lista de respostas.
+    //    Link utilizado para informação sobre comparar RadioButtons
+    //    https://stackoverflow.com/questions/26736285/getcheckedradiobuttonid-of-radiogroup-returns-2131034181-2-3-4
     private void compararRadioButton() {
         for (RadioGroup group : listaRadioGroup) {
             RadioButton respostaRadioBtn = findViewById(group.getCheckedRadioButtonId());

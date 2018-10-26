@@ -5,7 +5,10 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     tools:context=".MainActivity">
-
+    <!--Links de cascata de include com merge para inflar
+    https://www.thiengo.com.br/tags-merge-e-viewstub-para-otimizar-sua-app-android
+    https://pt.stackoverflow.com/questions/8164/quais-s%C3%A3o-as-diferen%C3%A7as-entre-merge-e-include
+    https://developer.android.com/training/improving-layouts/reusing-layouts-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
