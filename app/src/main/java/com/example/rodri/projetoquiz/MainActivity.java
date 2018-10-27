@@ -16,54 +16,48 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     //    Declaração das variaveis globais.
-    RadioButton radioBtnOneOne;
-    RadioButton radioBtnOneTwo;
-    RadioButton radioBtnOneThree;
-    RadioButton radioBtnOneFour;
-    EditText editTextTwo;
-    CheckBox checkBoxThreeOne;
-    CheckBox checkBoxThreeTwo;
-    CheckBox checkBoxThreeThree;
-    CheckBox checkBoxThreeFour;
-    RadioButton radioBtnFourOne;
-    RadioButton radioBtnFourTwo;
-    RadioButton radioBtnFourThree;
-    RadioButton radioBtnFourFour;
-    CheckBox checkBoxFiveOne;
-    CheckBox checkBoxFiveTwo;
-    CheckBox checkBoxFiveThree;
-    CheckBox checkBoxFiveFour;
-    RadioButton radioBtnSixOne;
-    RadioButton radioBtnSixTwo;
-    RadioButton radioBtnSixThree;
-    RadioButton radioBtnSixFour;
-    RadioButton radioBtnSevenOne;
-    RadioButton radioBtnSevenTwo;
-    RadioButton radioBtnSevenThree;
-    RadioButton radioBtnSevenFour;
-    RadioButton radioBtnEightOne;
-    RadioButton radioBtnEightTwo;
-    RadioButton radioBtnEightThree;
-    RadioButton radioBtnEightFour;
-    RadioButton radioBtnNineOne;
-    RadioButton radioBtnNineTwo;
-    RadioButton radioBtnNineThree;
-    RadioButton radioBtnNineFour;
-    EditText editTextTen;
+    private RadioButton radioBtnOneOne;
+    private RadioButton radioBtnOneTwo;
+    private RadioButton radioBtnOneThree;
+    private RadioButton radioBtnOneFour;
+    private EditText editTextTwo;
+    private CheckBox checkBoxThreeOne;
+    private CheckBox checkBoxThreeTwo;
+    private CheckBox checkBoxThreeThree;
+    private CheckBox checkBoxThreeFour;
+    private RadioButton radioBtnFourOne;
+    private RadioButton radioBtnFourTwo;
+    private RadioButton radioBtnFourThree;
+    private RadioButton radioBtnFourFour;
+    private CheckBox checkBoxFiveOne;
+    private CheckBox checkBoxFiveTwo;
+    private CheckBox checkBoxFiveThree;
+    private CheckBox checkBoxFiveFour;
+    private RadioButton radioBtnSixOne;
+    private RadioButton radioBtnSixTwo;
+    private RadioButton radioBtnSixThree;
+    private RadioButton radioBtnSixFour;
+    private RadioButton radioBtnSevenOne;
+    private RadioButton radioBtnSevenTwo;
+    private RadioButton radioBtnSevenThree;
+    private RadioButton radioBtnSevenFour;
+    private RadioButton radioBtnEightOne;
+    private RadioButton radioBtnEightTwo;
+    private RadioButton radioBtnEightThree;
+    private RadioButton radioBtnEightFour;
+    private RadioButton radioBtnNineOne;
+    private RadioButton radioBtnNineTwo;
+    private RadioButton radioBtnNineThree;
+    private RadioButton radioBtnNineFour;
+    private EditText editTextTen;
     //    Declaração dos radios gupos e suas listas.
-    RadioGroup radioGroup1;
-    RadioGroup radioGroup4;
-    RadioGroup radioGroup6;
-    RadioGroup radioGroup7;
-    RadioGroup radioGroup8;
-    RadioGroup radioGroup9;
-    List<RadioGroup> listaRadioGroup = new ArrayList<>();
-    List<RadioButton> listRadioBtnCertos = new ArrayList<>();
+    private List<RadioGroup> listaRadioGroup = new ArrayList<>();
+    private List<RadioButton> listRadioBtnCertos = new ArrayList<>();
     //    Criação da matriz e vetor dos CheckBox.
-    CheckBox[][] matrizCheckBox = new CheckBox[2][4];
-    CheckBox[] vetorCheckBoxRespostasCertas = new CheckBox[5];
+    private CheckBox[][] matrizCheckBox = new CheckBox[2][4];
+    private CheckBox[] vetorCheckBoxRespostasCertas = new CheckBox[5];
     //    Variavel para pontuação do quiz.
-    int pontucao;
+    private int pontucao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +103,12 @@ public class MainActivity extends AppCompatActivity {
         radioBtnNineFour = findViewById(R.id.radio_btn_nine_four);
         editTextTen = findViewById(R.id.edit_text_ten);
 //        Componentes para comparação das respostas trabalhando com ArrayList.
+        RadioGroup radioGroup1;
+        RadioGroup radioGroup4;
+        RadioGroup radioGroup6;
+        RadioGroup radioGroup7;
+        RadioGroup radioGroup8;
+        RadioGroup radioGroup9;
         radioGroup1 = findViewById(R.id.radio_group_one);
         radioGroup4 = findViewById(R.id.radio_group_four);
         radioGroup6 = findViewById(R.id.radio_group_six);
@@ -173,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
         String sQuestionTen = editTextTen.getText().toString();
         int contRadioVazio = 0;
         int contCheckBoxVazio = 0;
+        boolean questionCheckBoxImcompleta = false;
         for (RadioGroup group : listaRadioGroup) {
             int vazio = group.getCheckedRadioButtonId();
             if (vazio == -1) {
@@ -187,14 +188,18 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), mensErroEditText, Toast.LENGTH_SHORT).show();
             verificador = true;
         }
-        for (int i = 0; i < matrizCheckBox.length; i++) {
-            for (int j = 0; j < matrizCheckBox[i].length; j++) {
-                if (!matrizCheckBox[i][j].isChecked()) {
+        for (CheckBox[] question : matrizCheckBox) {
+            for (CheckBox alternativa : question) {
+                if (!alternativa.isChecked()) {
                     contCheckBoxVazio++;
                 }
             }
+            if (contCheckBoxVazio > 3) {
+                questionCheckBoxImcompleta = true;
+            }
+            contCheckBoxVazio = 0;
         }
-        if (contCheckBoxVazio > 6) {
+        if (questionCheckBoxImcompleta) {
             Toast.makeText(getApplicationContext(), mensErroCheckBox, Toast.LENGTH_SHORT).show();
             verificador = true;
         }
@@ -205,16 +210,14 @@ public class MainActivity extends AppCompatActivity {
     //    link com modelo de comparação para EditText
     //    https://pt.stackoverflow.com/questions/3905/como-comparar-strings-em-java
     private void compararEditText() {
-        String respostaQuestionTwo = getResources().getString(R.string.edit_resposta_two);
-        String respostaQuestionTen = getResources().getString(R.string.edit_resposta_ten);
-        if (respostaQuestionTwo.equalsIgnoreCase(editTextTwo.getText().toString())) {
+        if (getString(R.string.edit_resposta_two).equalsIgnoreCase(editTextTwo.getText().toString())) {
             pontucao += 10;
             editTextTwo.setTextColor(getResources().getColor(R.color.resposta_certa));
             editTextTwo.setTypeface(Typeface.DEFAULT_BOLD);
         } else {
             editTextTwo.setTextColor(getResources().getColor(R.color.resposta_errada));
         }
-        if (respostaQuestionTen.equalsIgnoreCase(editTextTen.getText().toString())) {
+        if (getString(R.string.edit_resposta_ten).equalsIgnoreCase(editTextTen.getText().toString())) {
             pontucao += 10;
             editTextTen.setTextColor(getResources().getColor(R.color.resposta_certa));
             editTextTen.setTypeface(Typeface.DEFAULT_BOLD);
@@ -225,10 +228,10 @@ public class MainActivity extends AppCompatActivity {
 
     //    Compara as resposta marcadas com o vetor para verificar as certas.
     private void compararCheckBox() {
-        for (int i = 0; i < matrizCheckBox.length; i++) {
-            for (int j = 0; j < matrizCheckBox[i].length; j++) {
-                if (matrizCheckBox[i][j].isChecked()) {
-                    compararMatrizVetorCheckBox(i, j);
+        for (CheckBox[] question : matrizCheckBox) {
+            for (CheckBox opcao : question) {
+                if (opcao.isChecked()) {
+                    compararMatrizVetorCheckBox(opcao);
                 }
             }
         }
@@ -242,19 +245,17 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Compara as resposta do metodo compararCheckBox com o vetor de respostas certas
-     *
-     * @param linha  pega a linha da matriz
-     * @param coluna pega a coluna da matriz
+     * @param opcao passa o CheckBox marcado para ver se esta certo ou errado
      */
-    private void compararMatrizVetorCheckBox(int linha, int coluna) {
+    private void compararMatrizVetorCheckBox(CheckBox opcao) {
         for (CheckBox alternativas : vetorCheckBoxRespostasCertas) {
-            if (alternativas.equals(matrizCheckBox[linha][coluna])) {
+            if (alternativas.equals(opcao)) {
                 alternativas.setTypeface(Typeface.DEFAULT_BOLD);
                 alternativas.setTextColor(getResources().getColor(R.color.resposta_certa));
                 pontucao += 4;
                 return;
             } else {
-                matrizCheckBox[linha][coluna].setTextColor(getResources().getColor(R.color.resposta_errada));
+                opcao.setTextColor(getResources().getColor(R.color.resposta_errada));
             }
         }
     }
